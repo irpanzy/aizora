@@ -1,7 +1,6 @@
 "use server";
 
 import { schemaSignIn } from "@/lib/schema";
-import { schemaSignIn } from "@/lib/schema";
 import { ActionResult } from "@/types";
 import { redirect } from "next/navigation";
 import prisma from "../../../../../../../lib/prisma";
