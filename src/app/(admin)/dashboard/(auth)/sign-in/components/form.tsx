@@ -20,6 +20,7 @@ import {
     AlertDescription,
     AlertTitle,
 } from "@/components/ui/alert"
+import { ModeToggle } from '@/components/ui/mode-toggle'
 
 const initialState: ActionResult = {
     error: ''
@@ -38,12 +39,13 @@ function SubmitButton() {
 export default function FormSignIn() {
     const [state, formAction] = useFormState(SignIn, initialState)
 
-    console.log(state)
-
     return (
         <Card>
             <CardHeader>
-                <CardTitle className="text-2xl">Login</CardTitle>
+                <div className="flex justify-between items-center w-full">
+                    <CardTitle className="text-2xl">Login</CardTitle>
+                    <ModeToggle />
+                </div>
                 <CardDescription>
                     Enter your email below to login to your account
                 </CardDescription>
@@ -73,10 +75,6 @@ export default function FormSignIn() {
                             <div className="flex items-center">
                                 <Label htmlFor="password">Password</Label>
                             </div>
-                            <Input
-                                name="password"
-                                id="password"
-                                type="password" />
                             <Input
                                 name="password"
                                 id="password"
