@@ -1,6 +1,6 @@
 "use client"
 
-import React from 'react'
+import React, { useState } from 'react'
 import { Button } from "@/components/ui/button"
 import {
     Card,
@@ -21,6 +21,7 @@ import {
     AlertTitle,
 } from "@/components/ui/alert"
 import { ModeToggle } from '@/components/ui/mode-toggle'
+import { Eye, EyeOff } from "lucide-react"
 
 const initialState: ActionResult = {
     error: ''
@@ -38,6 +39,11 @@ function SubmitButton() {
 
 export default function FormSignIn() {
     const [state, formAction] = useFormState(SignIn, initialState)
+    const [showPassword, setShowPassword] = useState(false)
+
+    const togglePasswordVisibility = () => {
+        setShowPassword((prev) => !prev);
+    };
 
     return (
         <Card>
@@ -71,14 +77,28 @@ export default function FormSignIn() {
                                 placeholder="m@example.com"
                             />
                         </div>
-                        <div className="grid gap-2">
-                            <div className="flex items-center">
+                        <div className="grid gap-2 relative">
+                            {/* Flexbox untuk menyelaraskan Label dan Icon */}
+                            <div className="flex items-center justify-between w-full">
                                 <Label htmlFor="password">Password</Label>
+                                <button
+                                    type="button"
+                                    onClick={togglePasswordVisibility}
+                                    className="text-gray-600"
+                                >
+                                    {showPassword ? (
+                                        <EyeOff className="h-5 w-5" />
+                                    ) : (
+                                        <Eye className="h-5 w-5" />
+                                    )}
+                                </button>
                             </div>
                             <Input
                                 name="password"
                                 id="password"
-                                type="password" />
+                                type={showPassword ? "text" : "password"}
+                                placeholder="Enter your password"
+                            />
                         </div>
                         <SubmitButton />
                     </div>
