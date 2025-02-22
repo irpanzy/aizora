@@ -12,6 +12,7 @@ import {
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { useFormState, useFormStatus } from 'react-dom'
+import { useFormState, useFormStatus } from 'react-dom'
 import { SignIn } from '../lib/actions'
 import { ActionResult } from '@/types';
 import { AlertCircle } from "lucide-react"
@@ -35,8 +36,20 @@ function SubmitButton() {
     )
 }
 
+function SubmitButton() {
+    const { pending } = useFormStatus()
+
+    return (
+        <Button type="submit" className="w-full" disabled={pending}>
+            {pending ? "Loading..." : "Login"}
+        </Button>
+    )
+}
+
 export default function FormSignIn() {
     const [state, formAction] = useFormState(SignIn, initialState)
+
+    console.log(state)
 
     console.log(state)
 
@@ -73,6 +86,10 @@ export default function FormSignIn() {
                             <div className="flex items-center">
                                 <Label htmlFor="password">Password</Label>
                             </div>
+                            <Input
+                                name="password"
+                                id="password"
+                                type="password" />
                             <Input
                                 name="password"
                                 id="password"
