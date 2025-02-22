@@ -11,7 +11,7 @@ import {
 } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
-import { useFormState } from 'react-dom'
+import { useFormState, useFormStatus } from 'react-dom'
 import { SignIn } from '../lib/actions'
 import { ActionResult } from '@/types';
 
@@ -19,8 +19,20 @@ const initialState: ActionResult = {
     error: ''
 }
 
+function SubmitButton() {
+    const { pending } = useFormStatus()
+
+    return (
+        <Button type="submit" className="w-full" disabled={pending}>
+            {pending ? "Loading..." : "Login"}
+        </Button>
+    )
+}
+
 export default function FormSignIn() {
     const [state, formAction] = useFormState(SignIn, initialState)
+
+    console.log(state)
 
     return (
         <Card>
@@ -40,18 +52,18 @@ export default function FormSignIn() {
                                 id="email"
                                 type="email"
                                 placeholder="m@example.com"
-                                required
                             />
                         </div>
                         <div className="grid gap-2">
                             <div className="flex items-center">
                                 <Label htmlFor="password">Password</Label>
                             </div>
-                            <Input name="password" id="password" type="password" required />
+                            <Input
+                                name="password"
+                                id="password"
+                                type="password" />
                         </div>
-                        <Button type="submit" className="w-full">
-                            Login
-                        </Button>
+                        <SubmitButton />
                         <Button variant="outline" className="w-full">
                             Login with Google
                         </Button>
