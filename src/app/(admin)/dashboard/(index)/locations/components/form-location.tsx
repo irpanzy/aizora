@@ -10,16 +10,16 @@ import { AlertCircle, ChevronLeft } from 'lucide-react'
 import Link from 'next/link'
 import React from 'react'
 import { useFormState, useFormStatus } from 'react-dom'
-import { Category } from '@prisma/client'
-import { postCategory, updateCategory } from '../lib/action'
+import { Location } from '@prisma/client'
+import { postLocation, updateLocation } from '../lib/action'
 
 const initialState: ActionResult = {
   error: ''
 }
 
-interface FormCategoryProps {
+interface FormLocationProps {
   type?: 'create' | 'edit'
-  data?: Category | null
+  data?: Location | null
 }
 
 function SubmitButton() {
@@ -27,15 +27,15 @@ function SubmitButton() {
 
   return (
     <Button type='submit' size="sm" disabled={pending}>
-      {pending ? "Loading..." : "Save Category"}
+      {pending ? "Loading..." : "Save Location"}
     </Button>
   )
 }
 
-export default function FormCategory({ data = null, type = 'create' }: FormCategoryProps) {
-  const updateCategoryById = (_: unknown, formData: FormData) => updateCategory(_, formData, data?.id)
+export default function FormLocation({ data = null, type = 'create' }: FormLocationProps) {
+  const updateLocationById = (_: unknown, formData: FormData) => updateLocation(_, formData, data?.id)
 
-  const [state, formAction] = useFormState(type === 'create' ? postCategory : updateCategoryById, initialState)
+  const [state, formAction] = useFormState(type === 'create' ? postLocation : updateLocationById, initialState)
 
   return (
     <form action={formAction}>
@@ -48,13 +48,13 @@ export default function FormCategory({ data = null, type = 'create' }: FormCateg
               className="h-7 w-7"
               asChild
             >
-              <Link href="/dashboard/categories">
+              <Link href="/dashboard/locations">
                 <ChevronLeft className="h-4 w-4" />
                 <span className="sr-only">Back</span>
               </Link>
             </Button>
             <h1 className="flex-1 shrink-0 whitespace-nowrap text-xl font-semibold tracking-tight sm:grow-0">
-              Category Controller
+              Location Controller
             </h1>
             <div className="hidden items-center gap-2 md:ml-36 mr-64 md:flex">
               <SubmitButton />
@@ -67,9 +67,9 @@ export default function FormCategory({ data = null, type = 'create' }: FormCateg
                 className="w-[500px]"
               >
                 <CardHeader>
-                  <CardTitle>Category Details</CardTitle>
+                  <CardTitle>Location Details</CardTitle>
                   <CardDescription>
-                    Category details help provide more context for the user.
+                    Location details help provide more context for the user.
                   </CardDescription>
                 </CardHeader>
                 <CardContent>

@@ -14,3 +14,9 @@ export const schemaCategory = z.object({
     .string({ required_error: "Name is required" })
     .min(3, { message: "Name must be at least 3 characters" }),
 });
+
+export const schemaLocation = z.object({
+  name: z
+    .string({ required_error: "Name is required" })
+    .min(3, { message: "Name must be at least 3 characters" }),
+});

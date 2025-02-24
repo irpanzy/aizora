@@ -28,7 +28,7 @@ export async function postCategory(
 	} catch (error) {
 		console.log(error);
 		return {
-			error: "Failed to insert data",
+			error: "Failed to create data",
 		};
 	}
 
@@ -89,7 +89,7 @@ export async function deleteCategory(
 	} catch (error) {
 		console.log(error);
 		return {
-			error: "Failed to delete category",
+			error: "Failed to delete data",
 		};
 	}
 
