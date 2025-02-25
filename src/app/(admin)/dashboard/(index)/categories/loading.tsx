@@ -11,8 +11,8 @@ export default function Loading() {
                 <div className="flex flex-col space-y-3 p-6">
                     <Skeleton className="h-8 w-[125px]" />
                     <Skeleton className="h-4 w-[350px]" />
-                    <div className="flex flex-col space-y-3 p-5">
-                        <Skeleton className="h-12 w-[125px]" />
+                    <div className="flex flex-col space-y-3 p-4">
+                        <Skeleton className="h-10 w-[125px]" />
                         <div className="flex space-x-4">
                             <Skeleton className="h-12 w-[530px]" />
                             <div className="flex space-x-4">
