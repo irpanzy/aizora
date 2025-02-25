@@ -24,17 +24,16 @@ export default function Sidebar() {
             <aside className="fixed inset-y-0 left-0 z-10 hidden w-14 flex-col border-r bg-background sm:flex">
                 <nav className="flex flex-col items-center gap-4 px-2 sm:py-5">
                     <Link
-                        href="#"
+                        href=""
                         className="group flex h-9 w-9 shrink-0 items-center justify-center gap-2 rounded-full bg-primary text-lg font-semibold text-primary-foreground md:h-8 md:w-8 md:text-base"
                     >
                         <Package2 className="h-4 w-4 transition-all group-hover:scale-110" />
-                        <span className="sr-only">Acme Inc</span>
                     </Link>
                     <Tooltip>
                         <TooltipTrigger asChild>
                             <Link
                                 href="/dashboard"
-                                className="flex h-9 w-9 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-foreground md:h-8 md:w-8"
+                                className="flex h-9 w-9 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-foreground focus:text-black active:text-black md:h-8 md:w-8"
                             >
                                 <Home className="h-5 w-5" />
                                 <span className="sr-only">Dashboard</span>
@@ -46,7 +45,7 @@ export default function Sidebar() {
                         <TooltipTrigger asChild>
                             <Link
                                 href="/dashboard/categories"
-                                className="flex h-9 w-9 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-foreground md:h-8 md:w-8"
+                                className="flex h-9 w-9 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-foreground focus:text-black active:text-black md:h-8 md:w-8"
                             >
                                 <ChartBarStacked className="h-5 w-5" />
                                 <span className="sr-only">Categories</span>
@@ -58,7 +57,7 @@ export default function Sidebar() {
                         <TooltipTrigger asChild>
                             <Link
                                 href="/dashboard/locations"
-                                className="flex h-9 w-9 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-foreground md:h-8 md:w-8"
+                                className="flex h-9 w-9 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-foreground focus:text-black active:text-black md:h-8 md:w-8"
                             >
                                 <MapPin className="h-5 w-5" />
                                 <span className="sr-only">Locations</span>
@@ -70,7 +69,7 @@ export default function Sidebar() {
                         <TooltipTrigger asChild>
                             <Link
                                 href="/dashboard/brands"
-                                className="flex h-9 w-9 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-foreground md:h-8 md:w-8"
+                                className="flex h-9 w-9 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-foreground focus:text-black active:text-black md:h-8 md:w-8"
                             >
                                 <Building className="h-5 w-5" />
                                 <span className="sr-only">Brands</span>
@@ -82,7 +81,7 @@ export default function Sidebar() {
                         <TooltipTrigger asChild>
                             <Link
                                 href="/dashboard/products"
-                                className="flex h-9 w-9 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-foreground md:h-8 md:w-8"
+                                className="flex h-9 w-9 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-foreground focus:text-black active:text-black md:h-8 md:w-8"
                             >
                                 <Package className="h-5 w-5" />
                                 <span className="sr-only">Products</span>
@@ -94,7 +93,7 @@ export default function Sidebar() {
                         <TooltipTrigger asChild>
                             <Link
                                 href="/dashboard/orders"
-                                className="flex h-9 w-9 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-foreground md:h-8 md:w-8"
+                                className="flex h-9 w-9 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-foreground focus:text-black active:text-black md:h-8 md:w-8"
                             >
                                 <ShoppingCart className="h-5 w-5" />
                                 <span className="sr-only">Orders</span>
@@ -106,7 +105,7 @@ export default function Sidebar() {
                         <TooltipTrigger asChild>
                             <Link
                                 href="/dashboard/customers"
-                                className="flex h-9 w-9 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-foreground md:h-8 md:w-8"
+                                className="flex h-9 w-9 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-foreground focus:text-black active:text-black md:h-8 md:w-8"
                             >
                                 <Users2 className="h-5 w-5" />
                                 <span className="sr-only">Customers</span>
