@@ -25,8 +25,7 @@ function SubmitButton() {
             size="sm"
             disabled={pending}
         >
-            <Trash className="w-4 h-4 mr-2" />{" "}
-            {pending ? "Loading..." : "Delete"}
+            <Trash className="w-4 h-4 mr-2" />
         </Button>
     );
 }

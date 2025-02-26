@@ -56,7 +56,7 @@ export default function FormLocation({ data = null, type = 'create' }: FormLocat
             <h1 className="flex-1 shrink-0 whitespace-nowrap text-xl font-semibold tracking-tight sm:grow-0">
               Location Controller
             </h1>
-            <div className="hidden items-center gap-2 md:ml-36 mr-64 md:flex">
+            <div className="hidden justify-end ml-10 md:flex">
               <SubmitButton />
             </div>
           </div>
@@ -64,7 +64,7 @@ export default function FormLocation({ data = null, type = 'create' }: FormLocat
             <div className="grid auto-rows-max items-start gap-4 lg:col-span-2 lg:gap-8">
               <Card
                 x-chunk="dashboard-07-chunk-0"
-                className="w-[500px]"
+                className="w-full sm:w-[500px] lg:w-full" 
               >
                 <CardHeader>
                   <CardTitle>Location Details</CardTitle>
