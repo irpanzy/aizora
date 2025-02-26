@@ -18,9 +18,9 @@ export default function Loading() {
                             <Skeleton className="h-10 w-[115px]" />
                         </div>
                         <div className="flex space-x-4">
-                            <div className="flex space-x-[225px]">
-                                <Skeleton className="h-16 w-[200px]" />
-                                <Skeleton className="h-16 w-[200px]" />
+                            <div className="flex space-x-[25px]">
+                                <Skeleton className="h-16 w-[400px]" />
+                                <Skeleton className="h-16 w-[400px]" />
                                 <div className="flex space-x-4">
                                     <Skeleton className="h-14 w-[50px]" />
                                     <Skeleton className="h-14 w-[50px]" />
@@ -28,9 +28,9 @@ export default function Loading() {
                             </div>
                         </div>
                         <div className="flex space-x-4">
-                            <div className="flex space-x-[225px]">
-                                <Skeleton className="h-16 w-[200px]" />
-                                <Skeleton className="h-16 w-[200px]" />
+                            <div className="flex space-x-[25px]">
+                                <Skeleton className="h-16 w-[400px]" />
+                                <Skeleton className="h-16 w-[400px]" />
                                 <div className="flex space-x-4">
                                     <Skeleton className="h-14 w-[50px]" />
                                     <Skeleton className="h-14 w-[50px]" />
@@ -38,9 +38,9 @@ export default function Loading() {
                             </div>
                         </div>
                         <div className="flex space-x-4">
-                            <div className="flex space-x-[225px]">
-                                <Skeleton className="h-16 w-[200px]" />
-                                <Skeleton className="h-16 w-[200px]" />
+                            <div className="flex space-x-[25px]">
+                                <Skeleton className="h-16 w-[400px]" />
+                                <Skeleton className="h-16 w-[400px]" />
                                 <div className="flex space-x-4">
                                     <Skeleton className="h-14 w-[50px]" />
                                     <Skeleton className="h-14 w-[50px]" />
@@ -48,9 +48,9 @@ export default function Loading() {
                             </div>
                         </div>
                         <div className="flex space-x-4">
-                            <div className="flex space-x-[225px]">
-                                <Skeleton className="h-16 w-[200px]" />
-                                <Skeleton className="h-16 w-[200px]" />
+                            <div className="flex space-x-[25px]">
+                                <Skeleton className="h-16 w-[400px]" />
+                                <Skeleton className="h-16 w-[400px]" />
                                 <div className="flex space-x-4">
                                     <Skeleton className="h-14 w-[50px]" />
                                     <Skeleton className="h-14 w-[50px]" />
@@ -58,9 +58,9 @@ export default function Loading() {
                             </div>
                         </div>
                         <div className="flex space-x-4">
-                            <div className="flex space-x-[225px]">
-                                <Skeleton className="h-16 w-[200px]" />
-                                <Skeleton className="h-16 w-[200px]" />
+                            <div className="flex space-x-[25px]">
+                                <Skeleton className="h-16 w-[400px]" />
+                                <Skeleton className="h-16 w-[400px]" />
                                 <div className="flex space-x-4">
                                     <Skeleton className="h-14 w-[50px]" />
                                     <Skeleton className="h-14 w-[50px]" />
