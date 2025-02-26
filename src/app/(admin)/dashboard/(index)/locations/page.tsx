@@ -15,7 +15,7 @@ import { getLocations } from "./lib/data";
 import Link from "next/link";
 
 export default async function LocationPage() {
-    const data = await getLocations();
+    const locations = await getLocations();
 
     return (
         <div className="space-y-4">
@@ -37,7 +37,7 @@ export default async function LocationPage() {
                     </CardDescription>
                 </CardHeader>
                 <CardContent>
-                    <DataTable columns={columns} data={data} />
+                    <DataTable columns={columns} data={locations} />
                 </CardContent>
             </Card>
         </div>
