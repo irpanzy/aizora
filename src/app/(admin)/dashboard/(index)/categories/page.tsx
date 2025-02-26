@@ -15,17 +15,17 @@ import { getCategories } from "./lib/data";
 import Link from "next/link";
 
 export default async function CategoriesPage() {
-    const data = await getCategories();
+    const categories = await getCategories();
 
     return (
         <div className="space-y-4">
             <div className="text-right">
                 <Button size="sm" className="h-8 gap-1" asChild>
                     <Link href="/dashboard/categories/create">
-                    <PlusCircle className="h-3.5 w-3.5" />
-                    <span className="sr-only sm:not-sr-only sm:whitespace-nowrap">
-                        Add Category
-                    </span>
+                        <PlusCircle className="h-3.5 w-3.5" />
+                        <span className="sr-only sm:not-sr-only sm:whitespace-nowrap">
+                            Add Category
+                        </span>
                     </Link>
                 </Button>
             </div>
@@ -37,7 +37,7 @@ export default async function CategoriesPage() {
                     </CardDescription>
                 </CardHeader>
                 <CardContent>
-                    <DataTable columns={columns} data={data} />
+                    <DataTable columns={columns} data={categories} />
                 </CardContent>
             </Card>
         </div>
