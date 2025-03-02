@@ -9,15 +9,33 @@ import {
 import { Button } from "@/components/ui/button";
 import { PlusCircle } from "lucide-react";
 import { DataTable } from "@/components/ui/data-table";
+import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator } from '@/components/ui/breadcrumb';
 import { columns } from "./columns";
 import Link from "next/link";
 import { getBrands } from "./lib/data";
 
 export default async function BrandsPage() {
-    const brands = await getBrands ()
+    const brands = await getBrands()
     return (
         <div className="space-y-4">
-            <div className="text-right">
+            <div className="flex items-center justify-between">
+                <Breadcrumb className="flex">
+                    <BreadcrumbList>
+                        <BreadcrumbItem>
+                            <BreadcrumbLink asChild>
+                                <Link href="/dashboard">Dashboard</Link>
+                            </BreadcrumbLink>
+                        </BreadcrumbItem>
+                        <BreadcrumbSeparator />
+                        <BreadcrumbPage>Brands</BreadcrumbPage>
+                        <BreadcrumbSeparator />
+                        <BreadcrumbItem>
+                            <BreadcrumbLink asChild>
+                                <Link href="/dashboard/brands/create">Create Brand</Link>
+                            </BreadcrumbLink>
+                        </BreadcrumbItem>
+                    </BreadcrumbList>
+                </Breadcrumb>
                 <Button size="sm" className="h-8 gap-1" asChild>
                     <Link href="/dashboard/brands/create">
                         <PlusCircle className="h-3.5 w-3.5" />

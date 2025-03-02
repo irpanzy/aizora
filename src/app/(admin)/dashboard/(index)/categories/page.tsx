@@ -10,6 +10,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { PlusCircle } from "lucide-react";
 import { DataTable } from "@/components/ui/data-table";
+import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator } from '@/components/ui/breadcrumb';
 import { columns } from "./columns";
 import { getCategories } from "./lib/data";
 import Link from "next/link";
@@ -19,8 +20,24 @@ export default async function CategoriesPage() {
 
     return (
         <div className="space-y-4">
-            <div className="text-right">
-                <Button size="sm" className="h-8 gap-1" asChild>
+            <div className="flex items-center justify-between">
+                <Breadcrumb className="flex">
+                    <BreadcrumbList>
+                        <BreadcrumbItem>
+                            <BreadcrumbLink asChild>
+                                <Link href="/dashboard">Dashboard</Link>
+                            </BreadcrumbLink>
+                        </BreadcrumbItem>
+                        <BreadcrumbSeparator />
+                        <BreadcrumbPage>Categories</BreadcrumbPage>
+                        <BreadcrumbSeparator />
+                        <BreadcrumbItem>
+                            <BreadcrumbLink asChild>
+                                <Link href="/dashboard/categories/create">Create Category</Link>
+                            </BreadcrumbLink>
+                        </BreadcrumbItem>
+                    </BreadcrumbList>
+                </Breadcrumb>                <Button size="sm" className="h-8 gap-1" asChild>
                     <Link href="/dashboard/categories/create">
                         <PlusCircle className="h-3.5 w-3.5" />
                         <span className="sr-only sm:not-sr-only sm:whitespace-nowrap">

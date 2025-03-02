@@ -7,6 +7,7 @@ import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import { ActionResult } from '@/types'
 import { AlertCircle, ChevronLeft } from 'lucide-react'
+import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator } from '@/components/ui/breadcrumb';
 import Link from 'next/link'
 import React from 'react'
 import { useFormState, useFormStatus } from 'react-dom'
@@ -43,6 +44,23 @@ export default function FormBrand({ data, type }: FormBrandProps) {
         <form action={formAction}>
             <div className="grid flex-1 items-start gap-4 p-4 sm:px-6 sm:py-0 md:gap-8">
                 <div className="mx-auto grid max-w-[59rem] flex-1 auto-rows-max gap-4">
+                    <Breadcrumb className="flex">
+                        <BreadcrumbList>
+                            <BreadcrumbItem>
+                                <BreadcrumbLink asChild>
+                                    <Link href="/dashboard">Dashboard</Link>
+                                </BreadcrumbLink>
+                            </BreadcrumbItem>
+                            <BreadcrumbSeparator />
+                            <BreadcrumbItem>
+                                <BreadcrumbLink asChild>
+                                    <Link href="/dashboard/brands">Brands</Link>
+                                </BreadcrumbLink>
+                            </BreadcrumbItem>
+                            <BreadcrumbSeparator />
+                            <BreadcrumbPage>Create Brand</BreadcrumbPage>
+                        </BreadcrumbList>
+                    </Breadcrumb>
                     <div className="flex items-center gap-4">
                         <Button
                             variant="outline"
