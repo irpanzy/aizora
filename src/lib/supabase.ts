@@ -5,17 +5,20 @@ const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_KEY ?? "";
 
 const supabase = createClient(supabaseUrl, supabaseKey);
 
-export const getImageUrl = (name: string) => {
+export const getImageUrl = (
+  name: string,
+  path: "brands" | "products" = "brands"
+) => {
   const { data } = supabase.storage
     .from("aizora")
-    .getPublicUrl(`public/brands/${name}`);
+    .getPublicUrl(`public/${path}/${name}`);
 
   return data.publicUrl;
 };
 
 export const uploadFile = async (
   file: File,
-  path: "brands" | "proucts" = "brands"
+  path: "brands" | "products" = "brands"
 ) => {
   const fileType = file.type.split("/")[1];
   const fileName = `${path}-${Date.now()}.${fileType}`;
