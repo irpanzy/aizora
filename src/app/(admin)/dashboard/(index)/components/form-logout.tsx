@@ -23,7 +23,7 @@ export default function FormLogout() {
             <Tooltip>
                 <TooltipTrigger asChild>
                     <form action={formAction}>
-                        <button className="flex h-9 w-9 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-foreground md:h-8 md:w-8">
+                        <button className="flex h-9 w-9 items-center justify-center rounded-full bg-red-600 text-white transition-colors hover:bg-red-700 md:h-8 md:w-8">
                             <LogOut className="h-5 w-5" />
                             <span className="sr-only">Logout</span>
                         </button>
