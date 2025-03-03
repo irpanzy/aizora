@@ -26,7 +26,6 @@ export default async function OrderPage() {
                         </BreadcrumbItem>
                         <BreadcrumbSeparator />
                         <BreadcrumbPage>Orders</BreadcrumbPage>
-                        <BreadcrumbSeparator />
                     </BreadcrumbList>
                 </Breadcrumb>
             </div>
