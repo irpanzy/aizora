@@ -8,7 +8,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Label } from "@/components/ui/label";
-import FormProduct from '../../components/form-product';
+import FormEdit from '../../components/form-edit';
 import { getBrands } from '../../../brands/lib/data';
 import { getCategories } from '../../../categories/lib/data';
 import { getLocations } from '../../../locations/lib/data';
@@ -26,7 +26,7 @@ export default async function EditPage({ params }: Tedit) {
   }
 
   return (
-    <FormProduct type="edit" data={product}>
+    <FormEdit type="edit" data={product}>
       <div className="grid gap-3">
         <Label htmlFor="category">Category</Label>
         <Select name="category_id" defaultValue={product.category_id.toString()}>
@@ -66,6 +66,6 @@ export default async function EditPage({ params }: Tedit) {
           </SelectContent>
         </Select>
       </div>
-    </FormProduct>
+    </FormEdit>
   )
 }
