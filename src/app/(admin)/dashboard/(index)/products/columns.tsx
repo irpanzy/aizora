@@ -36,7 +36,6 @@ export const columns: ColumnDef<Tcolumn>[] = [
             </div>;
         }
     },
-
     {
         accessorKey: "name",
         header: "Product Name",
