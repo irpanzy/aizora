@@ -1,19 +1,19 @@
 import { redirect } from 'next/navigation'
 import React from 'react'
 import { getLocationById } from '../../lib/data'
-import FormLocation from '../../components/form-location'
+import FormEdit from '../../components/form-edit'
 import { Tedit } from '@/types'
 
 export default async function EditPage({ params }: Tedit) {
-  const data = await getLocationById(params.id)
+  const location = await getLocationById(params.id)
 
-  if (!data) {
-    return redirect('/dashboard/categories');
+  if (!location) {
+    return redirect('/dashboard/location');
   }
 
   return (
     <div>
-      <FormLocation type='edit' data={data} />
+      <FormEdit type='edit' data={location} />
     </div>
   )
 }

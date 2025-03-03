@@ -3,6 +3,6 @@ import FormCategory from '../components/form-category'
 
 export default function CreatePage() {
     return (
-        <FormCategory />
+        <FormCategory type="create"/>
     )
 }

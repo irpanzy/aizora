@@ -1,7 +1,7 @@
 import { redirect } from 'next/navigation'
 import React from 'react'
 import { getCategoryById } from '../../lib/data'
-import FormCategory from '../../components/form-category'
+import FormEdit from '../../components/form-edit'
 import { Tedit } from '@/types'
 
 export default async function EditPage({ params }: Tedit) {
@@ -13,7 +13,7 @@ export default async function EditPage({ params }: Tedit) {
 
   return (
     <div>
-      <FormCategory type='edit' data={category} />
+      <FormEdit type='edit' data={category} />
     </div>
   )
 }

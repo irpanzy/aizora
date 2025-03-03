@@ -3,6 +3,6 @@ import FormLocation from '../components/form-location'
 
 export default function CreatePage() {
     return (
-        <FormLocation />
+        <FormLocation type="create" />
     )
 }

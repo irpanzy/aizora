@@ -44,7 +44,7 @@ export default function UploadImages() {
                         alt="Product image"
                         className="aspect-square w-full rounded-md object-cover"
                         height={300}
-                        src={images[0] || "/images/icon-upload.png"}
+                        src={images[0] || "/assets/icons/upload.svg"}
                         width={300}
                     />
                     <div className="grid grid-cols-3 gap-2">
@@ -53,7 +53,7 @@ export default function UploadImages() {
                                 alt="Product image"
                                 className="aspect-square w-full rounded-md object-cover"
                                 height={84}
-                                src={images[1] || "/images/icon-upload.png"}
+                                src={images[1] || "/assets/icons/upload.svg"}
                                 width={84}
                             />
                         </button>
@@ -62,7 +62,7 @@ export default function UploadImages() {
                                 alt="Product image"
                                 className="aspect-square w-full rounded-md object-cover"
                                 height={84}
-                                src={images[2] || "/images/icon-upload.png"}
+                                src={images[2] || "/assets/icons/upload.svg"}
                                 width={84}
                             />
                         </button>
