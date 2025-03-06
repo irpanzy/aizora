@@ -1,23 +1,36 @@
-# Aizora
+# 🌟 Aizora - Modern E-Commerce Platform
 
-Aizora adalah proyek e-commerce toko baju berbasis web yang dibangun menggunakan teknologi modern seperti Next.js, TypeScript, Supabase, Prisma, Lucia Auth, dan ShadCN untuk UI.
+Aizora adalah proyek e-commerce toko baju berbasis web yang dibangun menggunakan teknologi modern untuk memberikan pengalaman belanja yang cepat, aman, dan menarik. Dibangun dengan **Next.js**, **TypeScript**, **Supabase**, **Prisma**, **Lucia Auth**, dan **ShadCN**, Aizora menawarkan solusi e-commerce yang skalabel dan mudah dikembangkan.
+
+---
 
 ## 🚀 Teknologi yang Digunakan
 
-- **Next.js & TypeScript** - Framework React untuk performa tinggi dan pengembangan yang lebih mudah.
-- **Supabase** - Backend sebagai layanan yang digunakan sebagai database.
-- **Prisma** - ORM untuk interaksi dengan database.
-- **Lucia Auth** - Sistem autentikasi yang aman dan modern.
-- **ShadCN** - Komponen UI yang mudah digunakan dan dikustomisasi.
+Aizora menggunakan stack teknologi terdepan untuk memastikan performa tinggi, keamanan, dan kemudahan pengembangan:
 
-## 📦 Fitur Utama
+- **Next.js & TypeScript**: Framework React yang powerful dengan dukungan TypeScript untuk pengembangan yang lebih aman dan efisien.
+- **Supabase**: Backend sebagai layanan (BaaS) yang menyediakan database real-time dan autentikasi.
+- **Prisma**: ORM modern untuk mengelola dan berinteraksi dengan database dengan mudah.
+- **Lucia Auth**: Sistem autentikasi yang aman dan fleksibel untuk mengelola pengguna.
+- **ShadCN**: Library komponen UI yang cantik dan mudah dikustomisasi untuk tampilan yang responsif.
 
-- 🔹 **Manajemen Produk**: Tambah, edit, dan hapus produk.
-- 🔹 **Autentikasi Pengguna**: Login dan registrasi dengan Lucia Auth.
-- 🔹 **Database dengan Supabase**: Menyimpan data pengguna, produk, dan pesanan.
-- 🔹 **UI Modern**: Menggunakan ShadCN untuk tampilan yang menarik dan responsif.
+---
 
-## ⚡ Instalasi dan Menjalankan Proyek
+## ✨ Fitur Utama
+
+Aizora dilengkapi dengan fitur-fitur canggih untuk memenuhi kebutuhan e-commerce modern:
+
+- **🔹 Manajemen Produk**: Tambah, edit, dan hapus produk dengan antarmuka yang intuitif.
+- **🔹 Autentikasi Pengguna**: Sistem login dan registrasi yang aman menggunakan Lucia Auth.
+- **🔹 Database dengan Supabase**: Menyimpan data pengguna, produk, dan pesanan secara efisien.
+- **🔹 UI Modern & Responsif**: Tampilan yang menarik dan ramah pengguna dengan komponen dari ShadCN.
+- **🔹 Performa Tinggi**: Dioptimalkan dengan Next.js untuk kecepatan dan SEO yang baik.
+
+---
+
+## 🛠️ Instalasi dan Menjalankan Proyek
+
+Berikut langkah-langkah untuk menjalankan proyek Aizora di lingkungan lokal Anda:
 
 1. **Kloning Repository**
    ```bash
