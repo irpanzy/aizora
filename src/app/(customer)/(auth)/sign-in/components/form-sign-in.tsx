@@ -1,18 +1,17 @@
 "use client"
 
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { ActionResult } from '@/types';
 import { useFormState, useFormStatus } from 'react-dom';
-import { signIn } from '../lib/action';
-import { AlertCircle, BaggageClaim, LockKeyholeIcon, Mail } from "lucide-react"
-import {
-    Alert,
-    AlertDescription,
-    AlertTitle,
-} from "@/components/ui/alert"
+import { signIn } from '../../lib/action';
+import { LockKeyholeIcon, Mail } from "lucide-react"
 import Image from 'next/image';
 import { Eye, EyeOff } from "lucide-react"
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const initialFormState: ActionResult = {
     error: "",
@@ -33,6 +32,7 @@ function SubmitButton() {
 }
 
 export default function FormSignIn() {
+    const router = useRouter();
     const [state, formAction] = useFormState(signIn, initialFormState);
     const [showPassword, setShowPassword] = useState(false)
 
@@ -40,9 +40,22 @@ export default function FormSignIn() {
         setShowPassword((prev) => !prev);
     };
 
+    useEffect(() => {
+        if (state.error) {
+            toast.error(state.error);
+        }
+        if (state.success) {
+            toast.success("You have successfully login 🎉");
+            setTimeout(() => {
+                router.push("/");
+            }, 2000);
+        }
+    }, [router, state]);
+
     return (
-        <div id="signin" className="bg-[#EFF3FA] min-h-screen pt-[30px] pb-[50px] flex flex-col">
-            <nav className="container max-w-[1130px] mx-auto flex items-center justify-between bg-[#AC1754] p-5 rounded-3xl">
+        <div id="signin" className="bg-[#EFF3FA] min-h-screen py-5 px-5 flex flex-col">
+            <ToastContainer position="top-right" autoClose={2000} />
+            {/* <nav className="container max-w-[1130px] mx-auto flex items-center justify-between bg-[#AC1754] p-5 rounded-3xl">
                 <div className="flex shrink-0">
                     <Image
                         alt="Logo"
@@ -82,9 +95,9 @@ export default function FormSignIn() {
                         Sign Up
                     </a>
                 </div>
-            </nav>
-            <div className="container max-w-[1130px] mx-auto flex flex-1 items-center justify-center py-5">
-                <form action={formAction} className="w-[500px] bg-white p-[50px_30px] flex flex-col gap-5 rounded-3xl border border-[#E5E5E5]">
+            </nav> */}
+            <div className="container max-w-[1130px] mx-auto flex flex-1 items-center justify-center">
+                <form action={formAction} className="w-full sm:w-[500px] md:w-[500px] bg-white p-[20px_30px] sm:p-[40px_30px] flex flex-col gap-6 rounded-3xl border border-[#E5E5E5]">
                     <div className="flex justify-center">
                         <Image
                             alt="Logo"
@@ -93,16 +106,8 @@ export default function FormSignIn() {
                             height={100}
                         />
                     </div>
-                    <h1 className="font-bold text-2xl leading-[34px]">Sign In</h1>
-                    {state.error !== '' && (
-                        <Alert className='border border-[#AC1754] text-[#AC1754] p-3 rounded'>
-                            <AlertCircle className="h-4 w-4" />
-                            <AlertTitle>Error</AlertTitle>
-                            <AlertDescription>
-                                {state.error}
-                            </AlertDescription>
-                        </Alert>
-                    )}
+                    <h1 className="font-bold text-2xl leading-[34px] text-center sm:text-left">Sign In</h1>
+
                     <div className="flex items-center gap-[10px] rounded-full border border-[#E5E5E5] p-[12px_20px] focus-within:ring-2 focus-within:ring-[#F7A8C4] transition-all duration-300">
                         <div className="flex shrink-0">
                             <Mail
