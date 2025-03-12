@@ -11,6 +11,12 @@ export const schemaSignIn = z.object({
     .min(6, { message: "Password must be at least 6 characters" }),
 });
 
+export const schemaSignUp = schemaSignIn.extend({
+  name: z
+    .string({ required_error: "Name is required" })
+    .min(3, { message: "Name must be at least 3 characters" }),
+});
+
 export const schemaCategory = z.object({
   name: z
     .string({ required_error: "Name is required" })
