@@ -35,20 +35,24 @@ Berikut langkah-langkah untuk menjalankan proyek Aizora di lingkungan lokal Anda
 1. **Kloning Repository**
    ```bash
    git clone https://github.com/irpanzy/aizora.git
-   cd aizora
    ```
 
-2. **Instal Dependensi**
+2. Masuk ke direktori proyek.
+   ```bash
+   cd aizora
+      ```
+
+3. **Instal Dependensi**
    ```bash
    npm install
    # atau
    yarn install
    ```
 
-3. **Konfigurasi Environment**
+4. **Konfigurasi Environment**
    Buat file `.env` berdasarkan `.env.example` dan isi dengan konfigurasi yang diperlukan.
 
-4. **Jalankan Proyek**
+5. **Jalankan Proyek**
    ```bash
    npm run dev
    # atau
