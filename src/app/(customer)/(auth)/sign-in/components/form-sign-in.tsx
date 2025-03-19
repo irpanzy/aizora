@@ -53,7 +53,7 @@ export default function FormSignIn() {
     }, [router, state]);
 
     return (
-        <div id="signin" className="bg-[#EFF3FA] min-h-screen py-5 px-5 flex flex-col">
+        <div id="signin" className="bg-[#AC1754] min-h-screen py-5 px-5 flex flex-col">
             <ToastContainer position="top-right" autoClose={2000} />
             {/* <nav className="container max-w-[1130px] mx-auto flex items-center justify-between bg-[#AC1754] p-5 rounded-3xl">
                 <div className="flex shrink-0">

@@ -53,7 +53,7 @@ export default function SignUpPage() {
     }, [router, state]);
 
     return (
-        <div id="signup" className="bg-[#EFF3FA] min-h-screen py-5 px-5 flex flex-col">
+        <div id="signup" className="bg-[#AC1754] min-h-screen py-5 px-5 flex flex-col">
             <ToastContainer position="top-right" autoClose={2000} />
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
