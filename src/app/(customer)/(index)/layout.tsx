@@ -1,6 +1,14 @@
 import { Montserrat } from "next/font/google";
 
 import '../../index.css'
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+    title: "Home | Aizora",
+    icons: {
+        icon: "/assets/logos/favicon.ico",
+    },
+};
 
 const montserrat = Montserrat({
     weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
