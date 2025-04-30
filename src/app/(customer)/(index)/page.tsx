@@ -1,5 +1,4 @@
 import React from 'react'
-import Navbar from './components/navbar'
 import BadgeHighlight from './components/badge-highlight'
 import HeroTitle from './components/hero-title'
 import ActionButtons from './components/action-buttons'
@@ -8,12 +7,13 @@ import Testimonials from './components/testimonials'
 import ListCategory from './components/list-categories'
 import ListProducts from './components/list-products'
 import ListBrands from './components/list-brands'
+import NavbarHome from './components/navbar'
 
 export default function HomePage() {
   return (
     <>
       <header className="bg-[#EFF3FA] pt-[30px] pb-[50px]">
-        <Navbar />
+        <NavbarHome />
         <div className="container max-w-[1130px] mx-auto flex items-center justify-between gap-1 mt-[50px]">
           <div className="flex flex-col gap-[30px]">
             <BadgeHighlight />

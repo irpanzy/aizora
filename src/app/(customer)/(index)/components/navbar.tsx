@@ -1,7 +1,9 @@
-import React from 'react'
-import Image from 'next/image'
-import { BaggageClaim } from 'lucide-react'
-import Link from 'next/link'
+"use client";
+
+import React from "react";
+import Image from "next/image";
+import { BaggageClaim } from "lucide-react";
+import Link from "next/link";
 
 export default function Navbar() {
     return (
@@ -30,21 +32,23 @@ export default function Navbar() {
             </ul>
             <div className="flex items-center gap-3">
                 <a href="cart.html">
-                    <div className="w-12 h-12 flex shrink-0">
-                        <BaggageClaim
-                            className="w-15 h-15 rounded-full bg-white p-3"
-                            width={50}
-                            height={50}
-                        />
+                    <div className="w-12 h-12 flex items-center justify-center shrink-0 bg-white rounded-full cursor-pointer hover:shadow-lg active:scale-95 transition-all duration-300">
+                        <BaggageClaim className="hover:text-[#AC1754]" width={24} height={24} />
                     </div>
                 </a>
-                <Link href="/sign-in" className="p-[12px_20px] bg-white rounded-full font-semibold">
+                <Link
+                    href="/sign-in"
+                    className="p-[12px_20px] bg-white hover:text-[#AC1754] hover:shadow-lg active:scale-95 transition-all duration-300 rounded-full font-semibold"
+                >
                     Sign In
                 </Link>
-                <Link href="/sign-up" className="p-[12px_20px] bg-white rounded-full font-semibold">
+                <Link
+                    href="/sign-up"
+                    className="p-[12px_20px] bg-white hover:text-[#AC1754] hover:shadow-lg active:scale-95 transition-all duration-300 rounded-full font-semibold"
+                >
                     Sign Up
                 </Link>
             </div>
         </nav>
-    )
+    );
 }
